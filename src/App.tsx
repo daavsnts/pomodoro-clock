@@ -1,11 +1,14 @@
 import { useState } from 'react'
 import './App.css'
+import Controls from './components/Controls/Controls'
+import Display from './components/Display/Display'
 
 function App() {
-  const [count, setCount] = useState(0)
   
   return (
     <div className="App">
+      <Controls />
+      <Display/>
     </div>
   )
 }
