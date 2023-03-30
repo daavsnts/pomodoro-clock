@@ -1,17 +1,17 @@
 const initialState = {
-    currentSession: 25
+    currentMinutes: 25
 }
 
 export default function sessionReducer(state = initialState, action: any) {
     switch(action.type) {
         case "session/reset":
-            return { ...state, currentSession: 25 }
+            return { ...state, currentMinutes: 25 }
         case "session/increment":
-            if ((state.currentSession == 60)) return { ...state, currentSession: 60 }
-            return { ...state, currentSession: state.currentSession + 1}
+            if ((state.currentMinutes == 60)) return { ...state, currentMinutes: 60 }
+            return { ...state, currentMinutes: state.currentMinutes + 1}
         case "session/decrement":
-            if ((state.currentSession == 1)) return { ...state, currentSession: 1 }
-            return { ...state, currentSession: state.currentSession - 1}
+            if ((state.currentMinutes == 1)) return { ...state, currentMinutes: 1 }
+            return { ...state, currentMinutes: state.currentMinutes - 1}
     }
     return state
 }

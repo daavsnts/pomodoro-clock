@@ -1,12 +1,12 @@
 import { combineReducers } from "redux"
 import sessionReducer from "./session/reducer"
 import breakReducer from "./break/reducer"
-import playReducer from "./play/reducer"
+import clockReducer from "./clock/reducer"
 
 export const rootReducer = combineReducers({
     sessionReducer,
     breakReducer,
-    playReducer
+    clockReducer
 })
 
 export type RootState = ReturnType<typeof rootReducer>
